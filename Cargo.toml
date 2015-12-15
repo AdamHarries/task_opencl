@@ -1,0 +1,8 @@
+[package]
+name = "task-opencl"
+version = "0.1.0"
+authors = ["Adam Harries <adam.harries@ed.ac.uk>"]
+# repository = "https://github.com/AdamHarries/gpgpu-experiments"
+
+[dependencies]
+opencl = { git = "https://github.com/AdamHarries/rust-opencl.git" }

@@ -33,6 +33,6 @@ unsigned int lock_value(cl_lock lock) {
 unsigned int unlock_value(cl_lock lock) {
 	// attempt to write a lock value to the lock
 	unsigned int old = atomic_cmpxchg(cl_lock, LOCKED_VAL, UNLOCKED_VAL);
-	// check old to see if we've locked it - i.e. it was previously unlocked
+	// check old to see if we've unlockd it - i.e. it was previously locked
 	return (old == LOCKED_VAL);
 }

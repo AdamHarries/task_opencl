@@ -4,7 +4,7 @@
 
 
 /*
-  attempt to lock a vertex - i.e. get exclusive access to the
+  attempt to lock a lock - i.e. get exclusive access to the
   we do this by attempting an atomic CAS with a locked or not 
   locked value
 
@@ -20,7 +20,7 @@ int glb_lock_value(__global int* lock) {
 }
 
 /* 
-  unlock a vertex, if we own it - we _must_ do this after locking
+  unlock a lock, if we own it - we _must_ do this after locking
   otherwise other threads will not be able to read/write the value
 
   returns: whether or not it was lock in the first place (boolean)
